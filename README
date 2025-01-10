@@ -1,0 +1,9 @@
+
+# Steps to run the script:
+1. Create a file named `kometa.env` in the root directory of your project.
+2. Fill out the `kometa.env` file with the required environment variable values.
+3. Run the following command to start the services using Docker Compose:
+
+    ```sh
+    docker compose up
+    ```

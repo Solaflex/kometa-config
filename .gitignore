@@ -1,0 +1,6 @@
+*.env
+config/logs
+config/UUID
+config/config.cache-journal
+config/config.cache
+config/config.yml.template
