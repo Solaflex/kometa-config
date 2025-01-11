@@ -1,22 +1,22 @@
 libraries:
-  Filme:
-    metadata_path:
-    - pmm: imdb
-    overlay_path:
-    - pmm: ratings
-      template_variables:
-        rating1: critic
-        rating1_image: imdb
-        horizontal_position: left
-        vertical_position: bottom
-        rating_alignment: horizontal
-    - pmm: resolution
-      template_variables:
-        horizontal_align: left
-        vertical_align: top
-    operations:
-      mass_critic_rating_update: imdb
-      delete_unmanaged_collections: true
+  # Filme:
+  #   metadata_path:
+  #   - pmm: imdb
+  #   overlay_path:
+  #   - pmm: ratings
+  #     template_variables:
+  #       rating1: critic
+  #       rating1_image: imdb
+  #       horizontal_position: left
+  #       vertical_position: bottom
+  #       rating_alignment: horizontal
+  #   - pmm: resolution
+  #     template_variables:
+  #       horizontal_align: left
+  #       vertical_align: top
+  #   operations:
+  #     mass_critic_rating_update: imdb
+  #     delete_unmanaged_collections: true
   Filme-4K:
     metadata_path:
     - pmm: imdb

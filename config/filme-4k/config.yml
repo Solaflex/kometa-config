@@ -1,0 +1,79 @@
+libraries:
+  Filme-4K:
+    metadata_path:
+    - pmm: imdb
+    overlay_path:
+    - pmm: ratings
+      template_variables:
+        rating1: critic
+        rating1_image: imdb
+        horizontal_position: left
+        vertical_position: bottom
+        rating_alignment: horizontal
+    - pmm: resolution
+      template_variables:
+        horizontal_align: left
+        vertical_align: top
+    operations:
+      mass_critic_rating_update: imdb
+      delete_unmanaged_collections: true
+settings:
+  cache: true
+  cache_expiration: 60
+  asset_directory: config/assets
+  asset_folders: true
+  asset_depth: 0
+  create_asset_folders: false
+  run_order:
+  - operations
+  - metadata
+  - collections
+  - overlays
+  prioritize_assets: false
+  dimensional_asset_rename: false
+  download_url_assets: false
+  show_missing_assets: true
+  show_missing_season_assets: false
+  show_missing_episode_assets: false
+  show_asset_not_needed: true
+  sync_mode: append
+  default_collection_order:
+  minimum_items: 1
+  item_refresh_delay: 0
+  delete_below_minimum: false
+  delete_not_scheduled: false
+  run_again_delay: 0
+  missing_only_released: false
+  only_filter_missing: false
+  show_unmanaged: true
+  show_unconfigured: true
+  show_filtered: false
+  show_options: false
+  show_missing: true
+  save_report: false
+  tvdb_language: default
+  ignore_ids:
+  ignore_imdb_ids:
+  playlist_sync_to_users: all
+  playlist_exclude_users:
+  playlist_report: true
+  custom_repo:
+  overlay_artwork_filetype: jpg
+  overlay_artwork_quality:
+plex:                            # Can be individually specified per library as well; REQUIRED for the script to run
+  url: <<plexurl>>
+  token: <<plextoken>>
+  timeout: 60
+  clean_bundles: false
+  empty_trash: false
+  optimize: false
+  verify_ssl:
+  db_cache:
+tmdb:                            # REQUIRED for the script to run
+  apikey: <<tmdbapikey>>
+  language: en
+  cache_expiration: 60
+  region:
+omdb:
+  apikey: <<omdbapikey>>
+  cache_expiration: 60

@@ -1,8 +1,8 @@
 ---
 services:
-  kometa:
+  kometa-filme:
     image: lscr.io/linuxserver/kometa:latest
-    container_name: kometa
+    container_name: kometa-filme
     environment:
       - PUID=1000
       - PGID=1000
@@ -13,5 +13,80 @@ services:
     env_file:
       - ./kometa.env
     volumes:
-      - ./config:/config
+      - ./config/filme:/config
+    restart: unless-stopped
+  kometa-filme-4k:
+    image: lscr.io/linuxserver/kometa:latest
+    container_name: kometa-filme-4k
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Etc/UTC
+      - KOMETA_CONFIG=/config/config.yml #optional
+      - KOMETA_TIME=03:00 #optional
+      - KOMETA_RUN=True #optional
+    env_file:
+      - ./kometa.env
+    volumes:
+      - ./config/filme-4k:/config
+    restart: unless-stopped
+  kometa-filme-archive:
+    image: lscr.io/linuxserver/kometa:latest
+    container_name: kometa-filme-archive
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Etc/UTC
+      - KOMETA_CONFIG=/config/config.yml #optional
+      - KOMETA_TIME=03:00 #optional
+      - KOMETA_RUN=True #optional
+    env_file:
+      - ./kometa.env
+    volumes:
+      - ./config/filme-archive:/config
+    restart: unless-stopped
+  kometa-serien:
+    image: lscr.io/linuxserver/kometa:latest
+    container_name: kometa-serien
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Etc/UTC
+      - KOMETA_CONFIG=/config/config.yml #optional
+      - KOMETA_TIME=03:00 #optional
+      - KOMETA_RUN=True #optional
+    env_file:
+      - ./kometa.env
+    volumes:
+      - ./config/serien:/config
+    restart: unless-stopped
+  kometa-serien-4k:
+    image: lscr.io/linuxserver/kometa:latest
+    container_name: kometa-serien-4k
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Etc/UTC
+      - KOMETA_CONFIG=/config/config.yml #optional
+      - KOMETA_TIME=03:00 #optional
+      - KOMETA_RUN=True #optional
+    env_file:
+      - ./kometa.env
+    volumes:
+      - ./config/serien-4k:/config
+    restart: unless-stopped
+  kometa-serien-archiv:
+    image: lscr.io/linuxserver/kometa:latest
+    container_name: kometa-serien-archiv
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Etc/UTC
+      - KOMETA_CONFIG=/config/config.yml #optional
+      - KOMETA_TIME=03:00 #optional
+      - KOMETA_RUN=True #optional
+    env_file:
+      - ./kometa.env
+    volumes:
+      - ./config/serien-archiv:/config
     restart: unless-stopped
