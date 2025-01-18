@@ -14,7 +14,7 @@ services:
       - ./kometa.env
     volumes:
       - ./config/filme:/config
-    restart: unless-stopped
+    restart: no
   kometa-filme-4k:
     image: lscr.io/linuxserver/kometa:latest
     container_name: kometa-filme-4k
@@ -29,7 +29,7 @@ services:
       - ./kometa.env
     volumes:
       - ./config/filme-4k:/config
-    restart: unless-stopped
+    restart: no
   kometa-filme-archive:
     image: lscr.io/linuxserver/kometa:latest
     container_name: kometa-filme-archive
@@ -44,7 +44,7 @@ services:
       - ./kometa.env
     volumes:
       - ./config/filme-archive:/config
-    restart: unless-stopped
+    restart: no
   kometa-serien:
     image: lscr.io/linuxserver/kometa:latest
     container_name: kometa-serien
@@ -59,7 +59,7 @@ services:
       - ./kometa.env
     volumes:
       - ./config/serien:/config
-    restart: unless-stopped
+    restart: no
   kometa-serien-4k:
     image: lscr.io/linuxserver/kometa:latest
     container_name: kometa-serien-4k
@@ -74,7 +74,7 @@ services:
       - ./kometa.env
     volumes:
       - ./config/serien-4k:/config
-    restart: unless-stopped
+    restart: no
   kometa-serien-archiv:
     image: lscr.io/linuxserver/kometa:latest
     container_name: kometa-serien-archiv
@@ -89,4 +89,4 @@ services:
       - ./kometa.env
     volumes:
       - ./config/serien-archiv:/config
-    restart: unless-stopped
+    restart: no
